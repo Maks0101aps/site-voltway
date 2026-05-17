@@ -1,0 +1,15 @@
+@import "tailwindcss";
+:root{--background:#07111F;--foreground:#fff}
+@theme inline{--color-background:var(--background);--color-foreground:var(--foreground);--font-sans:var(--font-geist-sans)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#07111F;color:#fff;font-family:var(--font-geist-sans),Arial,sans-serif}
+.energy-grid{background-image:linear-gradient(rgba(14,165,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(14,165,255,.12) 1px,transparent 1px);background-size:54px 54px;mask-image:linear-gradient(to bottom,black,transparent 82%)}
+.glass{background:linear-gradient(135deg,rgba(255,255,255,.12),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(18px)}
+.text-glow{text-shadow:0 0 24px rgba(14,165,255,.55)}
+.road-line{background:linear-gradient(90deg,transparent,#0EA5FF,#7C3AED,transparent);filter:blur(.5px)}
+.scanline{background:linear-gradient(to bottom,transparent,rgba(14,165,255,.2),transparent);animation:scan 4s linear infinite}
+@keyframes scan{from{transform:translateY(-120%)}to{transform:translateY(220%)}}
+.orbit{animation:spin 14s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.city-glow{background:radial-gradient(circle at 70% 40%,rgba(14,165,255,.34),transparent 28%),radial-gradient(circle at 82% 60%,rgba(124,58,237,.32),transparent 26%)}
