@@ -13,3 +13,12 @@ body{margin:0;background:#07111F;color:#fff;font-family:var(--font-geist-sans),A
 .orbit{animation:spin 14s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 .city-glow{background:radial-gradient(circle at 70% 40%,rgba(14,165,255,.34),transparent 28%),radial-gradient(circle at 82% 60%,rgba(124,58,237,.32),transparent 26%)}
+@media (max-width: 767px){
+  .glass{backdrop-filter:blur(12px)}
+  .energy-grid{background-size:34px 34px}
+  .city-glow{background:radial-gradient(circle at 70% 40%,rgba(14,165,255,.24),transparent 35%),radial-gradient(circle at 82% 60%,rgba(124,58,237,.22),transparent 32%)}
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .scanline,.orbit{animation:none}
+}
